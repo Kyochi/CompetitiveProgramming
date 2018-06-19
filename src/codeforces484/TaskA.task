@@ -1,0 +1,42 @@
+5 TaskA
+6 SINGLE
+8 STANDARD
+9 input.txt
+8 STANDARD
+10 output.txt
+3
+0
+6 3
+101
+
+4 Yes
+
+1
+1
+7 4
+1011
+
+3 No
+
+1
+2
+8 5
+10001
+
+3 No
+
+1
+17 src/codeforces484
+16 -Xmx256m -Xss64m
+4 Main
+19 codeforces484.TaskA
+39 net.egork.chelper.checkers.TokenChecker
+0 
+0
+10 2018.05.18
+0 
+1
+17 java.util.Scanner
+19 java.io.PrintWriter
+0
+0

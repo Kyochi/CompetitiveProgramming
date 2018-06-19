@@ -1,0 +1,45 @@
+5 TaskA
+6 SINGLE
+8 STANDARD
+9 input.txt
+8 STANDARD
+10 output.txt
+2
+0
+27 4
+red
+purple
+yellow
+orange
+
+13 2
+Space
+Time
+
+1
+1
+2 0
+
+37 6
+Time
+Space
+Power
+Reality
+Mind
+Soul
+
+1
+17 src/codeforces485
+16 -Xmx256m -Xss64m
+4 Main
+19 codeforces485.TaskA
+39 net.egork.chelper.checkers.TokenChecker
+0 
+0
+10 2018.05.29
+0 
+1
+17 java.util.Scanner
+19 java.io.PrintWriter
+0
+0

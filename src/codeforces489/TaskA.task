@@ -1,38 +1,18 @@
-5 TaskB
+5 TaskA
 6 SINGLE
 8 STANDARD
 9 input.txt
 8 STANDARD
 10 output.txt
-2
 0
-28 4 5
-10101
-01000
-00111
-10000
-
-4 YES
-
-1
-1
-28 4 5
-10100
-01000
-00110
-00101
-
-3 NO
-
-1
-17 src/educational44
+17 src/codeforces489
 16 -Xmx256m -Xss64m
 4 Main
-19 educational44.TaskB
+19 codeforces489.TaskA
 39 net.egork.chelper.checkers.TokenChecker
 0 
 0
-10 2018.05.21
+10 2018.06.19
 0 
 1
 17 java.util.Scanner

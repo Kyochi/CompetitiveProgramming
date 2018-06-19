@@ -2,9 +2,7 @@ import java.io.OutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintWriter;
-import java.util.List;
 import java.util.Scanner;
-import java.util.ArrayList;
 
 /**
  * Built using CHelper plug-in
@@ -18,43 +16,37 @@ public class Main {
         OutputStream outputStream = System.out;
         Scanner in = new Scanner(inputStream);
         PrintWriter out = new PrintWriter(outputStream);
-        TaskCC solver = new TaskCC();
+        Tramway solver = new Tramway();
         solver.solve(1, in, out);
         out.close();
     }
 
-    static class TaskCC {
+    static class Tramway {
         public void solve(int testNumber, Scanner in, PrintWriter out) {
             int n = in.nextInt();
-            List<Long> disp = new ArrayList<>();
-            List<Long> price = new ArrayList<>();
-            int m = n;
-            int len = n;
-            while (m != 0) {
-                disp.add(in.nextLong());
-                m--;
-            }
-            while (n != 0) {
-                price.add(in.nextLong());
-                n--;
-            }
-            long last = len - 1;
-            long minL = Long.MAX_VALUE;
-            long minR = Long.MAX_VALUE;
-            for (int i = 0; i != len; i++) {
-                for (int j = 0; j < i; j++) {
-                    if (disp.get(i) > disp.get(j) && price.get(i) + price.get(j) < minL && i != len - 1) {
-                        minL = price.get(i) + price.get(j);
-                        last = i;
-                    }
+            int[][] mat = new int[n][n];
+            int[][] dp = new int[n][n];
+            for (int i = 0; i != n; i++) {
+                for (int j = 0; j != n; j++) {
+                    mat[i][j] = in.nextInt();
                 }
             }
-            for (int k = len - 1; k > last; k--) {
-                if (disp.get(k) > disp.get((int) last))
-                    minR = Math.min(minR, price.get(k));
+
+            for (int i = 1; i != n; i++) {
+                for (int j = 0; j < i; j++) {
+                    int m = dp[j][i - 1];
+                    for (int k = j; k < i; ++k) {
+                        int x = mat[k][i];
+                        if (j < k - 1)
+                            x += dp[j][k - 1];
+                        if (k + 1 < i - 1)
+                            x += dp[k + 1][i - 1];
+                        m = x > m ? x : m;
+                    }
+                    dp[j][i] = m;
+                }
             }
-            if (minL == Long.MAX_VALUE || minR == Long.MAX_VALUE) out.print(-1);
-            else out.print(minL + minR);
+            out.print(dp[0][n - 1]);
         }
 
     }

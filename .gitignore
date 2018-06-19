@@ -54,3 +54,5 @@ fabric.properties
 
 *.template
 CHelper*
+archive/
+.idea/vcs.xml
