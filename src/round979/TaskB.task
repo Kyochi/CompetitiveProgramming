@@ -1,0 +1,55 @@
+5 TaskB
+6 SINGLE
+8 STANDARD
+9 input.txt
+8 STANDARD
+10 output.txt
+4
+0
+19 3
+Kuroo
+Shiro
+Katie
+4 Kuro
+1
+1
+41 7
+treasurehunt
+threefriends
+hiCodeforces
+
+6 Shiro
+
+1
+2
+23 1
+abcabc
+cbabac
+ababca
+
+6 Katie
+
+1
+3
+33 15
+foPaErcvJ
+mZaxowpbt
+mkuOlaHRE
+
+5 Draw
+
+1
+12 src/round979
+16 -Xmx256m -Xss64m
+4 Main
+14 round979.TaskB
+39 net.egork.chelper.checkers.TokenChecker
+0 
+0
+10 2018.05.14
+0 
+1
+17 java.util.Scanner
+19 java.io.PrintWriter
+0
+0
