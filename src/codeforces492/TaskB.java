@@ -11,6 +11,12 @@ public class TaskB {
         int res = 0;
         for (int i = 0 ; i != n; i++) {
             q[i] = in.nextInt();
+            q[i] = q[i]%q.length+1;
+            if (q[i] == 0) {
+                res = (i)%q.length+1;
+                break;
+            }
         }
+        out.print(res);
     }
 }
